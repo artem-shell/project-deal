@@ -1,0 +1,26 @@
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3efdf">
+<title>Тихий план — список дел</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<main class="planner">
+<header class="top"><a class="brand" href="./index.html">тп<span>®</span></a><span class="edition">ЛИЧНЫЙ ОРГАНАЙЗЕР / VOL. 01</span><time id="date"></time></header>
+<section class="intro"><div><p class="eyebrow">МЕНЬШЕ ШУМА. БОЛЬШЕ СМЫСЛА.</p><h1>Тихий<br><em>план.</em></h1><p class="subtitle">Освободи мысли. Запиши важное.<br>Начни с одного небольшого дела.</p></div><aside class="note"><span class="spark" aria-hidden="true">✳</span><p>Не всё сразу.<br>Но что-то — сегодня.</p><span class="note-label">НАПОМИНАНИЕ СЕБЕ</span></aside></section>
+<section class="workspace" aria-label="Управление задачами">
+<form id="task-form"><label class="sr-only" for="task-input">Новая задача</label><input id="task-input" maxlength="180" placeholder="Что хочется сделать?" autocomplete="off" required><button class="add" type="submit" aria-label="Добавить задачу">+</button></form>
+<div class="toolbar"><div class="filters" role="group" aria-label="Фильтр задач"><button type="button" data-filter="all" aria-pressed="true">Все <span id="total">0</span></button><button type="button" data-filter="active" aria-pressed="false">В процессе</button><button type="button" data-filter="done" aria-pressed="false">Готово</button></div><button id="clear" type="button">Убрать готовое ↗</button></div>
+<div class="list-heading"><span>ТВОИ НЕБОЛЬШИЕ ШАГИ</span><span>БЕЗ СПЕШКИ</span></div>
+<ul id="task-list" aria-label="Список задач"></ul>
+<div id="empty" class="empty"><span aria-hidden="true">↳</span><h2>Место для хороших планов</h2><p>Добавь первое дело — остальное сложится.</p></div>
+<footer class="progress-footer"><div><span id="progress-text">Пока чистый лист</span><div class="progress" role="progressbar" aria-label="Выполнение задач" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-bar"></span></div></div><span class="footer-mark" aria-hidden="true">✳</span></footer>
+<p id="status" class="status" role="status" aria-live="polite"></p>
+</section><footer class="page-footer"><span>ТВОЙ ТЕМП — ПРАВИЛЬНЫЙ.</span><span>СОХРАНЯЕТСЯ В ЭТОМ БРАУЗЕРЕ ↗</span></footer>
+</main>
+<template id="task-template"><li class="task"><label class="check-wrap"><input class="task-check" type="checkbox"><span class="check-art" aria-hidden="true"></span><span class="task-text"></span></label><button type="button" class="delete" aria-label="Удалить задачу">×</button></li></template>
+</body>
+</html>
